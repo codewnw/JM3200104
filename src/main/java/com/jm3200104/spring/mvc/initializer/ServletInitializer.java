@@ -18,6 +18,7 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
 	@Override
 	protected String[] getServletMappings() {
+		//return new String[] { "/payment", "/user" };
 		return new String[] { "/" };
 	}
 
