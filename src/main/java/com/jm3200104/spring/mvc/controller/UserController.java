@@ -34,6 +34,7 @@ public class UserController {
 		return "users";
 	}
 
+	//http://localhost:8080/JM3200104/users/Rohit
 	@GetMapping("/{name}")
 	public String rohitSharma(Model model, 
 			@PathVariable("name") String name) {
@@ -45,6 +46,7 @@ public class UserController {
 		return "user";
 	}
 
+	//http://localhost:8080/JM3200104/users/search?lastName=Pandya
 	@GetMapping("/search")
 	public String usersByLastName(Model model, 
 			@RequestParam("lastName") String ln) {
