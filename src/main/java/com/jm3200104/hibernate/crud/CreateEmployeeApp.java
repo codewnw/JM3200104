@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class EmployeeApp {
+public class CreateEmployeeApp {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Employee.class).buildSessionFactory();
@@ -14,7 +14,7 @@ public class EmployeeApp {
 		try {
 			session.beginTransaction();
 
-			long id = (long)session.save(new Employee(101l, "Rohit", 25));
+			long id = (long)session.save(new Employee(103l, "virat", 26));
 			System.out.println(id);
 
 			session.getTransaction().commit();
