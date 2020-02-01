@@ -22,7 +22,6 @@ public class StudentController {
 
 	@PostMapping("/procress-form")
 	public String profile(@ModelAttribute("student") Student std) {
-		System.out.println(std);
 		return "student-profile";
 	}
 }
