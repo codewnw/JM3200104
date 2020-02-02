@@ -1,4 +1,4 @@
-package com.jm3200104.hibernate.pk.identity;
+package com.jm3200104.hibernate.pk.auto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "JM3200104_EMPLOYEE_IDENTITY")
-public class EmployeeIdentity {
+@Table(name = "JM3200104_EMPLOYEE_AUTO")
+public class EmployeeAuto {
 
 	@Id
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	@Column(name = "name")
@@ -31,12 +31,12 @@ public class EmployeeIdentity {
 		return id;
 	}
 
-	public EmployeeIdentity() {
+	public EmployeeAuto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public EmployeeIdentity(String name, int age) {
+	public EmployeeAuto(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;

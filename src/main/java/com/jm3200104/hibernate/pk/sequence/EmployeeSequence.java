@@ -1,19 +1,25 @@
-package com.jm3200104.hibernate.pk.identity;
+package com.jm3200104.hibernate.pk.sequence;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "JM3200104_EMPLOYEE_IDENTITY")
-public class EmployeeIdentity {
+@Table(name = "JM3200104_EMPLOYEE_SEQUENCE")
+public class EmployeeSequence {
 
 	@Id
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, 
+	generator = "my_seq")
+	@SequenceGenerator(name = "my_seq", 
+	sequenceName = "JM3200104_EMPLOYEE_SEQ", 
+	schema = "PUBLIC", 
+	allocationSize = 1)
 	private long id;
 
 	@Column(name = "name")
@@ -31,12 +37,12 @@ public class EmployeeIdentity {
 		return id;
 	}
 
-	public EmployeeIdentity() {
+	public EmployeeSequence() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public EmployeeIdentity(String name, int age) {
+	public EmployeeSequence(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
