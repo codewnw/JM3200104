@@ -13,12 +13,25 @@ import com.jm3200104.spring.mvc.service.ItemService;
 @Controller
 @RequestMapping("/items")
 public class ItemController {
-	
+
 	@Autowired
 	private ItemService itemService;
 
 	@GetMapping("/{id}")
 	public @ResponseBody String getItem(@PathVariable("id") long id) {
 		return itemService.getItem(id).toString();
+	}
+
+	@GetMapping("/fail")
+	public @ResponseBody String failtIt() {
+		int i = 10 / 0;
+		return "This should get failed.";
+	}
+
+	@GetMapping("/")
+	public @ResponseBody String getAllItems() {
+		int random = (int) (Math.random() * 10);
+		System.out.println("Random Number: "+random);
+		return random > 5 ? "We will not show any item" : null;
 	}
 }
