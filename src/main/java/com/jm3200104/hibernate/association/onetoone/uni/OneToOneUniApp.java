@@ -14,10 +14,24 @@ public class OneToOneUniApp {
 		try {
 			session.beginTransaction();
 
-			Result result = new Result("Pass");
-			Trainee trainee = new Trainee("Rohit", result);
+			// save
+//			Result result = new Result("Fail");
+//			Trainee trainee = new Trainee("Rishabh", result);
+//			session.save(trainee);
+
+			// get
+			Trainee trainee = session.get(Trainee.class, 2l);
+			System.out.println(trainee);
+
+			// update
+//			Trainee trainee = session.get(Trainee.class, 2l);
+//			trainee.setName("Rishabh Pant");
+//			trainee.getResult().setStatus("Pass");
+
+			// remove
+//			Trainee trainee = session.get(Trainee.class, 2l);
+//			session.delete(trainee);
 			
-			session.save(trainee);
 
 			session.getTransaction().commit();
 		} finally {

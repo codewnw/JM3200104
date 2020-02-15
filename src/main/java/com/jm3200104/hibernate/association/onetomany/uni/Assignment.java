@@ -1,18 +1,15 @@
-package com.jm3200104.hibernate.association.onetoone.uni;
+package com.jm3200104.hibernate.association.onetomany.uni;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "JM3200104_ONETOONE_UNI_TRAINEE")
-public class Trainee {
+@Table(name = "JM3200104_OTM_UNI_ASSIGNMENT")
+public class Assignment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,28 +19,23 @@ public class Trainee {
 	@Column(name = "name")
 	private String name;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "RESULT_ID")
-	private Result result;
-
-	public Trainee() {
+	public Assignment() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Trainee(String name, Result result) {
+	@Override
+	public String toString() {
+		return "Assignement [id=" + id + ", name=" + name + "]";
+	}
+
+	public Assignment(String name) {
 		super();
 		this.name = name;
-		this.result = result;
 	}
 
 	public long getId() {
 		return id;
-	}
-
-	@Override
-	public String toString() {
-		return "Trainee [id=" + id + ", name=" + name + ", result=" + result + "]";
 	}
 
 	public void setId(long id) {
@@ -57,12 +49,6 @@ public class Trainee {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Result getResult() {
-		return result;
-	}
-
-	public void setResult(Result result) {
-		this.result = result;
-	}
+	
+	
 }

@@ -1,4 +1,4 @@
-package com.jm3200104.hibernate.association.onetoone.uni;
+package com.jm3200104.hibernate.association.onetoone.bi;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "JM3200104_ONETOONE_UNI_TRAINEE")
+@Table(name = "JM3200104_ONETOONE_BI_TRAINEE")
 public class Trainee {
 
 	@Id
