@@ -25,7 +25,16 @@
 				Item</a></li>
 		<li><a href="${pageContext.request.contextPath}/items/fail">Item
 				Fail</a></li>
-				<li><a href="${pageContext.request.contextPath}/items/">All Items</a></li>
+		<li><a href="${pageContext.request.contextPath}/items/">All
+				Items</a></li>
 	</ul>
+	<hr>
+	<h1>Customer Controller (project-like)</h1>
+	<ul>
+		<li><a href="customers/add">Add Customer</a></li>
+		<li><a href="customers/list">List Customers</a></li>
+	</ul>
+	
+	
 </body>
 </html>

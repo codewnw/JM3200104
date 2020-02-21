@@ -52,7 +52,8 @@ public class SpringMvcConfig {
 	public LocalSessionFactoryBean getLocalSessionFactoryBean() throws PropertyVetoException {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(getComboPooledDataSource());
-		sessionFactory.setPackagesToScan("com.jm3200104.spring.mvc.model");
+		sessionFactory.setPackagesToScan("com.jm3200104.spring.mvc.model", 
+				"com.jm3200104.spring.mvc.customer");
 
 		Properties hibernateProps = new Properties();
 		hibernateProps.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
