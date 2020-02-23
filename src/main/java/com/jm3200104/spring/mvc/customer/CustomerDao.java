@@ -4,14 +4,14 @@ import java.util.List;
 
 public interface CustomerDao {
 
-	public Long createCustomer(Customer customer);
-	
-	public Customer getCustomer(Long ID);
+	Long createCustomer(Customer customer);
 
-	public List<Customer> getCustomers();
-	
-	public void createOrUpdateCustomer(Customer customer);
-	
-	public void deleteCustomer(Long customerId);
+	Customer getCustomer(Long ID);
+
+	List<Customer> getCustomers();
+
+	void createOrUpdateCustomer(Customer customer);
+
+	void deleteCustomer(Long customerId);
 
 }

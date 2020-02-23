@@ -4,14 +4,14 @@ import java.util.List;
 
 public interface CustomerService {
 
-	public Long createCustomer(Customer customer);
+	Long createCustomer(Customer customer);
 
-	public Customer getCustomer(Long ID);
+	Customer getCustomer(Long ID);
 
-	public List<Customer> getCustomers();
+	List<Customer> getCustomers();
 
-	public void createOrUpdateCustomer(Customer customer);
+	void createOrUpdateCustomer(Customer customer);
 
-	public void deleteCustomer(Long customerId);
+	void deleteCustomer(Long customerId);
 
 }
