@@ -18,6 +18,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 @EnableTransactionManagement
 public class SpringHibernateConfig {
+	
 	@Bean
 	public DataSource getComboPooledDataSource() throws PropertyVetoException {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource(true);
