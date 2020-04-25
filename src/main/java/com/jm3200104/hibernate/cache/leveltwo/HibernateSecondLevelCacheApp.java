@@ -11,12 +11,12 @@ public class HibernateSecondLevelCacheApp {
 
 		Session session1 = sessionFactory.openSession();
 		Employee e1 = session1.load(Employee.class, 101L);
-		System.out.println(e1);
+		System.out.println("e1:" + e1);
 		session1.close();
 
 		Session session2 = sessionFactory.openSession();
 		Employee e2 = session2.load(Employee.class, 101L);
-		System.out.println(e2);
+		System.out.println("e2:" + e2);
 		session2.close();
 
 		sessionFactory.close();
